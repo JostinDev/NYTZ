@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import React, { useEffect } from "react";
+import React, {useEffect} from "react";
 import Hero from "../components/hero"
 import Nav from "../components/nav"
 import Image from "next/image";
@@ -13,6 +13,21 @@ export default function Home() {
 		const firstSection = document.querySelector("#firstSection")
 		firstSection.style.marginTop = heroHeight.clientHeight + 'px'
 	},);
+
+
+	function moveTab(event) {
+		const dest = event.target.getBoundingClientRect();
+		const tab = document.querySelector("#tab").getBoundingClientRect();
+		const bubbleTab = document.querySelector("#bubbleTab");
+
+		const bubbleTabWidth = 40 * 2 + event.target.offsetWidth
+		const offset = bubbleTabWidth / 2 - event.target.offsetWidth / 2
+
+		bubbleTab.style.width = bubbleTabWidth + 'px'
+
+		bubbleTab.style.right = 'auto'
+		bubbleTab.style.left = dest.left - tab.left - offset + 'px'
+	}
 
 
 	return (
@@ -31,18 +46,15 @@ export default function Home() {
 
 				<div id='firstSection' className='mt-10 rounded-3xl py-40 px-24 bg-zinc-50 dark:bg-neutral-900 z-20 relative'>
 					<p className='text-7xl text-dark dark:text-white text-center'>What we do</p>
-					<Image
-						className='w-full my-10 sticky top-20'
-						src={tabs}
-						alt="Picture of the author"
-						placeholder='blur'
-					/>
 
-					<div className='flex flex-row justify-evenly w-full'>
-						<p>3D Projects</p>
-						<p>UI & UX Design</p>
-						<p>Coding</p>
-						<p>Video- & Photography</p>
+					<div id='tab' className='relative flex flex-row justify-between w-full bg-nytz-cream rounded-full h-[100px] items-center px-10'>
+						<span id='bubbleTab' className='absolute bg-nytz-dark w-[280px] h-[100px] rounded-full left-0'>
+
+						</span>
+						<p id='tab1' className='z-10 cursor-pointer px-10 py-8' onClick={moveTab}>3D Projects</p>
+						<p id='tab2' className='z-10 cursor-pointer px-10 py-8' onClick={moveTab}>UI & UX Design</p>
+						<p id='tab3' className='z-10 cursor-pointer px-10 py-8' onClick={moveTab}>Coding</p>
+						<p id='tab4' className='z-10 cursor-pointer px-10 py-8' onClick={moveTab}>Video- & Photography</p>
 					</div>
 
 					<Image
