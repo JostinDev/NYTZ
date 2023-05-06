@@ -77,8 +77,9 @@ export default function Hero() {
 				<div className="h-96 bg-gradient-to-t from-neutral-900 absolute bottom-0 w-full"></div>
 			</div>
 
-			<div id='heroText' style={{ color: heroColor }} className='-mt-20 z-10 relative ease-in-out duration-300'>
-				<h1 className='text-8xl font-bold'>STUDIO NYTZ</h1>
+			<div id='heroText' style={{ color: heroColor }} className='-mt-20 z-10 relative ease-in-out duration-300 pb-20'>
+				<h1 className='text-2xl font-bold mt-10'>We help you create your dreams.</h1>
+				<h1 className='text-4xl mt-10 w-1/2'>With us you can elevate your digital experience to the next level.</h1>
 				<p id='switch' className='hidden' onClick={imageSwitch}></p>
 			</div>
 		</div>

@@ -51,7 +51,7 @@ export default function DarkLightSwitch() {
 
 	return (
 
-		<div>
+		<div className='w-[132px] h-[62px] border-full border-nytz-dark'>
 			<Image className='w-6 cursor-pointer' onClick={themeSwitch} id='dark' src={moon} alt='darkMode'/>
 			<Image className='w-6 cursor-pointer' onClick={themeSwitch} id='light' src={sun} alt='lightMode'/>
 		</div>

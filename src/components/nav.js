@@ -2,6 +2,7 @@ import React from "react";
 import { Disclosure } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import DarkLightSwitch from "@/components/darkLightSwitch";
+import Menu from "@/components/menu";
 
 
 
@@ -55,7 +56,8 @@ export default function Nav() {
 										))}
 									</div>
 								</div>
-							<DarkLightSwitch></DarkLightSwitch>
+								<DarkLightSwitch></DarkLightSwitch>
+								<Menu></Menu>
 							</div>
 						</div>
 					</div>

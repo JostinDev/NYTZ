@@ -38,6 +38,13 @@ export default function Home() {
 						placeholder='blur'
 					/>
 
+					<div className='flex flex-row justify-evenly w-full'>
+						<p>3D Projects</p>
+						<p>UI & UX Design</p>
+						<p>Coding</p>
+						<p>Video- & Photography</p>
+					</div>
+
 					<Image
 						id='heroImage'
 						className='w-full rounded-3xl'
