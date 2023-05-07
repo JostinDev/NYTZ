@@ -17,12 +17,12 @@ export default function Home() {
 		const firstSection = document.querySelector("#firstSection")
 		firstSection.style.marginTop = heroHeight.clientHeight + 'px'
 
-
-		const bubbleTab = document.querySelector("#bubbleTab");
-		const tab1 = document.querySelector("#tab1");
-		const bubbleTabWidth = 40 * 2 + tab1.offsetWidth
-		bubbleTab.style.width = bubbleTabWidth + 'px'
-
+		if(tabState === 1) {
+			const bubbleTab = document.querySelector("#bubbleTab");
+			const tab1 = document.querySelector("#tab1");
+			const bubbleTabWidth = 40 * 2 + tab1.offsetWidth
+			bubbleTab.style.width = bubbleTabWidth + 'px'
+		}
 	},);
 
 	function Activity(props) {
