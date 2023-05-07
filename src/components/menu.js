@@ -1,39 +1,38 @@
-import React, { useEffect } from "react";
+import React, {useEffect} from "react";
 export default function Menu() {
+
 
 	let test;
 	useEffect(() => {
-
 		test = document.querySelector('#mobileMenu')
-
 	}, );
 
-
-	function toggleMenu() {
-		console.log('sup')
-
+	function toggleMenu(isOpen) {
 		test.classList.toggle('hidden')
+
+		if(isOpen) {
+			document.querySelector('body').style.overflowY = 'hidden'
+		} else {
+			document.querySelector('body').style.overflowY = 'auto'
+		}
+
 	}
 
 	return (
-
 		<div>
-
 			<div
-				onClick={toggleMenu}
+				onClick={()=>toggleMenu(true)}
 				id='menuToggle'
 				className='flex items-center justify-center w-[167px] h-[62px] border rounded-full border-nytz-cream text-nytz-cream cursor-pointer'>
 				Menu
 			</div>
-
-
 
 			<div
 				id='mobileMenu'
 				className='fixed flex flex-col pt-8 pr-12 pl-28 top-0 left-0 right-0 bg-white hidden' style={{height: 100 + 'svh'}}>
 
 				<div
-					onClick={()=>toggleMenu()}
+					onClick={()=>toggleMenu(false)}
 					className='flex items-center ml-auto justify-center w-[167px] h-[62px] border rounded-full border-nytz-dark text-nytz-dark cursor-pointer'>
 					Close
 				</div>
@@ -45,9 +44,7 @@ export default function Menu() {
 					<p className='pb-14'><span>04</span>Impressum</p>
 
 				</div>
-
 			</div>
-
 		</div>
 	);
 }
