@@ -1,4 +1,5 @@
 import React, {useEffect} from "react";
+import DarkLightSwitch from "@/components/darkLightSwitch";
 export default function Menu() {
 
 
@@ -37,12 +38,13 @@ export default function Menu() {
 					Close
 				</div>
 
+				<DarkLightSwitch></DarkLightSwitch>
+
 				<div>
 					<p className='pb-14'><span>01</span>What we do</p>
 					<p className='pb-14'><span>02</span>Who we are</p>
 					<p className='pb-14'><span>03</span>Contact us</p>
 					<p className='pb-14'><span>04</span>Impressum</p>
-
 				</div>
 			</div>
 		</div>

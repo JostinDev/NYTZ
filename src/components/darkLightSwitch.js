@@ -1,59 +1,73 @@
-import React, { useEffect } from "react";
-import moon from "../../public/moon.png";
-import sun from "../../public/sun.png";
+import React, {useEffect} from "react";
+import moon from "../../public/moon.svg";
+import moonDark from "../../public/moon-dark.svg";
+import sun from "../../public/sun.svg";
+import sunDark from "../../public/sun-dark.svg";
 import Image from "next/image";
 
 export default function DarkLightSwitch() {
 
-	let dark
-	let light
-	let userTheme
-	let systemTheme
+    let dark
+    let light
+    let userTheme
+    let systemTheme
 
-	useEffect(() => {
+    useEffect(() => {
 
-		dark = document.querySelector('#dark')
-		light = document.querySelector('#light')
+        dark = document.querySelector('#dark')
+        light = document.querySelector('#light')
 
-		userTheme = localStorage.getItem('theme')
-		systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches
+        userTheme = localStorage.getItem('theme')
+        systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches
 
-		themeCheck()
-		console.log('render')
+        themeCheck()
+        console.log('render')
 
-	}, );
+    },);
 
-	function iconToggle() {
-		dark.classList.toggle('hidden')
-		light.classList.toggle('hidden')
-	}
 
-	function themeSwitch () {
-		if (document.documentElement.classList.contains('dark')) {
-			document.documentElement.classList.remove('dark')
-			localStorage.setItem('theme', 'light')
-			iconToggle()
-			return
-		}
-		document.documentElement.classList.add('dark')
-		localStorage.setItem('theme', 'dark')
-		iconToggle()
-	}
+    function themeSwitch() {
+        if (document.documentElement.classList.contains('dark')) {
+            document.documentElement.classList.remove('dark')
+            localStorage.setItem('theme', 'light')
 
-	function themeCheck() {
-		if(userTheme === 'dark' || (!userTheme && systemTheme)) {
-			document.documentElement.classList.add('dark')
-			dark.classList.add('hidden')
-			return
-		}
-		light.classList.add('hidden')
-	}
+            return
+        }
+        document.documentElement.classList.add('dark')
+        localStorage.setItem('theme', 'dark')
+    }
 
-	return (
+    function themeCheck() {
+        if (userTheme === 'dark' || (!userTheme && systemTheme)) {
+            document.documentElement.classList.add('dark')
+            return
+        }
+    }
 
-		<div className='w-[132px] h-[62px] border-full border-nytz-dark'>
-			<Image className='w-6 cursor-pointer' onClick={themeSwitch} id='dark' src={moon} alt='darkMode'/>
-			<Image className='w-6 cursor-pointer' onClick={themeSwitch} id='light' src={sun} alt='lightMode'/>
-		</div>
-	);
+    return (
+
+            <div
+				onClick={themeSwitch}
+				className="relative flex cursor-pointer items-center p-1.5 transition-all duration-300 bg-nytz-light h-[62px] dark:bg-nytz-somber w-[120px] rounded-full"
+                id="darkModeToggle">
+
+				<span
+					className="absolute inline-block w-[50px] h-[50px] bg-white transition-all duration-300 dark:bg-black translate-x-0 dark:translate-x-[58px] rounded-full">
+				</span>
+
+                <div className="relative z-10 flex w-1/2 items-center">
+                    <i className="text-xl fa-regular fa-sun-bright text-space-blue dark:text-ash"></i>
+					<Image className='w-10 dark:hidden ml-[5px]' src={sun} alt='darkMode'/>
+					<Image className='w-10 hidden dark:block ml-[5px]' src={sunDark} alt='darkMode'/>
+                </div>
+
+                <div
+                    className="relative z-10 flex w-1/2 items-center justify-center">
+                    <i className="text-xl fa-regular fa-moon text-disabled-grey dark:text-white"></i>
+					<Image className='w-10 dark:hidden ml-[5px]' src={moon} alt='darkMode'/>
+					<Image className='w-10 hidden dark:block ml-[5px]' src={moonDark} alt='darkMode'/>
+                </div>
+            </div>
+
+    );
 }
