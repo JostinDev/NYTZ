@@ -24,7 +24,7 @@ export default function Menu() {
 			<div
 				onClick={()=>toggleMenu(true)}
 				id='menuToggle'
-				className='flex text-button hover:text-button-action active:text-button-action items-center justify-center w-[167px] h-[62px] border hover:border-[3px] rounded-full border-cloud text-cloud active:text-obsidian active:border-0 active:bg-cloud cursor-pointer select-none'>
+				className='flex transition-all text-button hover:text-button-action active:text-button-action items-center justify-center w-[167px] h-[62px] border hover:border-[3px] rounded-full border-cloud text-cloud active:text-obsidian active:border-0 active:bg-cloud cursor-pointer select-none'>
 				Menu
 			</div>
 
@@ -34,7 +34,7 @@ export default function Menu() {
 
 				<div
 					onClick={()=>toggleMenu(false)}
-					className='flex text-button hover:text-button-action active:text-button-action items-center ml-auto justify-center w-[167px] h-[62px] border hover:border-[3px] rounded-full border-obsidian text-obsidian active:text-cloud active:border-0 active:bg-obsidian cursor-pointer select-none'>
+					className='flex transition-all text-button hover:text-button-action active:text-button-action items-center ml-auto justify-center w-[167px] h-[62px] border hover:border-[3px] rounded-full border-obsidian text-obsidian active:text-cloud active:border-0 active:bg-obsidian cursor-pointer select-none'>
 					Close
 				</div>
 
