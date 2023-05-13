@@ -40,7 +40,6 @@ export default function DarkLightSwitch() {
     function themeCheck() {
         if (userTheme === 'dark' || (!userTheme && systemTheme)) {
             document.documentElement.classList.add('dark')
-            return
         }
     }
 
@@ -48,7 +47,7 @@ export default function DarkLightSwitch() {
 
             <div
 				onClick={themeSwitch}
-				className="relative flex cursor-pointer items-center p-1.5 transition-all duration-300 bg-nytz-light h-[62px] dark:bg-nytz-somber w-[120px] rounded-full"
+				className="relative flex cursor-pointer items-center p-1.5 transition-all duration-300 bg-cloud h-[62px] dark:bg-storm w-[120px] rounded-full select-none"
                 id="darkModeToggle">
 
 				<span
@@ -56,14 +55,12 @@ export default function DarkLightSwitch() {
 				</span>
 
                 <div className="relative z-10 flex w-1/2 items-center">
-                    <i className="text-xl fa-regular fa-sun-bright text-space-blue dark:text-ash"></i>
 					<Image className='w-10 dark:hidden ml-[5px]' src={sun} alt='darkMode'/>
 					<Image className='w-10 hidden dark:block ml-[5px]' src={sunDark} alt='darkMode'/>
                 </div>
 
                 <div
                     className="relative z-10 flex w-1/2 items-center justify-center">
-                    <i className="text-xl fa-regular fa-moon text-disabled-grey dark:text-white"></i>
 					<Image className='w-10 dark:hidden ml-[5px]' src={moon} alt='darkMode'/>
 					<Image className='w-10 hidden dark:block ml-[5px]' src={moonDark} alt='darkMode'/>
                 </div>

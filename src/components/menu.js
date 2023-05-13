@@ -24,7 +24,7 @@ export default function Menu() {
 			<div
 				onClick={()=>toggleMenu(true)}
 				id='menuToggle'
-				className='flex items-center justify-center w-[167px] h-[62px] border rounded-full border-nytz-cream text-nytz-cream cursor-pointer'>
+				className='flex text-button hover:text-button-action active:text-button-action items-center justify-center w-[167px] h-[62px] border hover:border-[3px] rounded-full border-cloud text-cloud active:text-obsidian active:border-0 active:bg-cloud cursor-pointer select-none'>
 				Menu
 			</div>
 
@@ -34,17 +34,25 @@ export default function Menu() {
 
 				<div
 					onClick={()=>toggleMenu(false)}
-					className='flex items-center ml-auto justify-center w-[167px] h-[62px] border rounded-full border-nytz-dark text-nytz-dark cursor-pointer'>
+					className='flex text-button hover:text-button-action active:text-button-action items-center ml-auto justify-center w-[167px] h-[62px] border hover:border-[3px] rounded-full border-obsidian text-obsidian active:text-cloud active:border-0 active:bg-obsidian cursor-pointer select-none'>
 					Close
 				</div>
 
 				<DarkLightSwitch></DarkLightSwitch>
 
-				<div>
-					<p className='pb-14'><span>01</span>What we do</p>
-					<p className='pb-14'><span>02</span>Who we are</p>
-					<p className='pb-14'><span>03</span>Contact us</p>
-					<p className='pb-14'><span>04</span>Impressum</p>
+				<div className='text-nytz-dark'>
+					<div>
+						<span className='text-ornament'>01</span><p className='pb-14 text-title inline-block cursor-pointer transition-all hover:skew-x-[-10deg]'>What we do</p>
+					</div>
+					<div>
+						<span className='text-ornament'>02</span><p className='pb-14 text-title inline-block cursor-pointer transition-all hover:skew-x-[-10deg]'>Who we are</p>
+					</div>
+					<div>
+						<span className='text-ornament'>03</span><p className='pb-14 text-title inline-block cursor-pointer transition-all hover:skew-x-[-10deg]'>Contact us</p>
+					</div>
+					<div>
+						<span className='text-ornament'>04</span><p className='pb-14 text-title inline-block cursor-pointer transition-all hover:skew-x-[-10deg]'>Impressum</p>
+					</div>
 				</div>
 			</div>
 		</div>
