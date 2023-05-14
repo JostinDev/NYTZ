@@ -1,18 +1,43 @@
 import React, {useEffect} from "react";
 import DarkLightSwitch from "@/components/darkLightSwitch";
+import LangSwitch from "@/components/langSwitch";
 export default function Menu() {
 
 
 	let test;
 	useEffect(() => {
 		test = document.querySelector('#mobileMenu')
+
+
+
 	}, );
+
+	function displayMenu() {
+		document.querySelector('#menu1').classList.remove('!bottom-0')
+		document.querySelector('#menu2').classList.remove('!bottom-0')
+		document.querySelector('#menu3').classList.remove('!bottom-0')
+		document.querySelector('#menu4').classList.remove('!bottom-0')
+
+		setTimeout(function() {
+			document.querySelector('#menu1').classList.add('!bottom-0')
+		}, 100);
+		setTimeout(function() {
+			document.querySelector('#menu2').classList.add('!bottom-0')
+		}, 250);
+		setTimeout(function() {
+			document.querySelector('#menu3').classList.add('!bottom-0')
+		}, 400);
+		setTimeout(function() {
+			document.querySelector('#menu4').classList.add('!bottom-0')
+		}, 550);
+	}
 
 	function toggleMenu(isOpen) {
 		test.classList.toggle('hidden')
 
 		if(isOpen) {
 			document.querySelector('body').style.overflowY = 'hidden'
+			displayMenu()
 		} else {
 			document.querySelector('body').style.overflowY = 'auto'
 		}
@@ -38,21 +63,29 @@ export default function Menu() {
 					Close
 				</div>
 
-				<DarkLightSwitch></DarkLightSwitch>
-
 				<div className='text-nytz-dark'>
-					<div>
-						<span className='text-ornament'>01</span><p className='pb-14 text-title inline-block cursor-pointer transition-all hover:skew-x-[-10deg]'>What we do</p>
+					<div className='transition-all overflow-hidden relative h-32 mb-10'>
+						<span className='text-ornament absolute bottom-5'>01</span>
+						<p id='menu1' className='text-title absolute ml-10 -bottom-32 inline-block cursor-pointer transition-all hover:skew-x-[-10deg]'>What we do</p>
 					</div>
-					<div>
-						<span className='text-ornament'>02</span><p className='pb-14 text-title inline-block cursor-pointer transition-all hover:skew-x-[-10deg]'>Who we are</p>
+					<div className='transition-all overflow-hidden relative h-32 mb-10'>
+						<span className='text-ornament absolute bottom-5'>02</span>
+						<p id='menu2'  className='text-title absolute ml-10 -bottom-32 inline-block cursor-pointer transition-all hover:skew-x-[-10deg]'>Who we are</p>
 					</div>
-					<div>
-						<span className='text-ornament'>03</span><p className='pb-14 text-title inline-block cursor-pointer transition-all hover:skew-x-[-10deg]'>Contact us</p>
+					<div className='transition-all overflow-hidden relative h-32 mb-10'>
+						<span className='text-ornament absolute bottom-5'>03</span>
+						<p id='menu3'  className='text-title absolute ml-10 -bottom-32 inline-block cursor-pointer transition-all hover:skew-x-[-10deg]'>Contact us</p>
 					</div>
-					<div>
-						<span className='text-ornament'>04</span><p className='pb-14 text-title inline-block cursor-pointer transition-all hover:skew-x-[-10deg]'>Impressum</p>
+					<div className='transition-all overflow-hidden relative h-32 mb-10'>
+						<span className='text-ornament absolute bottom-5'>04</span>
+						<p id='menu4'  className='text-title absolute ml-10 -bottom-32 inline-block cursor-pointer transition-all hover:skew-x-[-10deg]'>Impressum</p>
 					</div>
+				</div>
+
+
+				<div className='flex absolute bottom-8 right-8 gap-5'>
+					<DarkLightSwitch></DarkLightSwitch>
+					<LangSwitch></LangSwitch>
 				</div>
 			</div>
 		</div>
