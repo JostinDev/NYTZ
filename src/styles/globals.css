@@ -14,3 +14,13 @@
 .text-subtitle1, .text-subtitle2, .text-subtitle3, .text-ornament {
     @apply font-code;
 }
+
+@screen sm {
+    .text-body {
+        @apply text-body-desk;
+    }
+}
+
+.rotating-gradient {
+    background: url(../../public/noise-texture-200x200.png), 100px 100px repeat, linear-gradient(46deg, rgba(73, 9, 103, 0.81) 20.83%, rgba(17, 141, 181, 0.79) 97.92%);
+}

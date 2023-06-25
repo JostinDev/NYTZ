@@ -21,7 +21,6 @@ export default function DarkLightSwitch() {
         systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches
 
         themeCheck()
-        console.log('render')
 
     },);
 

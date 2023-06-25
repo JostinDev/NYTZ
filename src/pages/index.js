@@ -18,12 +18,23 @@ export default function Home() {
 		firstSection.style.marginTop = heroHeight.clientHeight + 'px'
 
 		if(tabState === 1) {
-			const bubbleTab = document.querySelector("#bubbleTab");
-			const tab1 = document.querySelector("#tab1");
-			const bubbleTabWidth = 40 * 2 + tab1.offsetWidth
-			bubbleTab.style.width = bubbleTabWidth + 'px'
+			moveTab(undefined, 1)
 		}
-	},);
+
+		function handleResize() {
+			moveTab(undefined, tabState)
+		}
+
+		window.addEventListener("resize", handleResize);
+		return () => {
+			window.removeEventListener("resize", handleResize);
+		};
+	});
+
+
+
+
+
 
 	function Activity(props) {
 
@@ -138,18 +149,40 @@ export default function Home() {
 
 	function moveTab(event, step) {
 
-		const dest = event.target.getBoundingClientRect();
+		let dest;
+		let bubbleTabWidth
+		let offset
 		const tab = document.querySelector("#tab").getBoundingClientRect();
 		const bubbleTab = document.querySelector("#bubbleTab");
 
-		const bubbleTabWidth = 40 * 2 + event.target.offsetWidth
-		const offset = bubbleTabWidth / 2 - event.target.offsetWidth / 2
 
-		bubbleTab.style.width = bubbleTabWidth + 'px'
+		if (event) {
+			dest = event.target.getBoundingClientRect();
+			bubbleTabWidth = 40 * 2 + event.target.offsetWidth
+			offset = bubbleTabWidth / 2 - event.target.offsetWidth / 2
 
-		bubbleTab.style.right = 'auto'
-		bubbleTab.style.left = dest.left - tab.left - offset + 'px'
+		} else {
+			const tab = document.querySelector("#tab" + step)
+			dest = tab.getBoundingClientRect();
+			bubbleTabWidth = 40 * 2 + tab.offsetWidth
+			offset = bubbleTabWidth / 2 - tab.offsetWidth / 2
+		}
 
+		const leftMargin = dest.left - tab.left - offset;
+
+		switch (step) {
+			case 1:
+				bubbleTab.style.width = bubbleTabWidth - 20 + 'px'
+				bubbleTab.style.left = leftMargin + 12 + 'px'
+				break;
+			case 4:
+				bubbleTab.style.width = bubbleTabWidth - 20 + 'px'
+				bubbleTab.style.left = leftMargin + 8  + 'px'
+				break;
+			default:
+				bubbleTab.style.width = bubbleTabWidth + 'px'
+				bubbleTab.style.left = leftMargin + 'px'
+		}
 		setTabState(step)
 	}
 
@@ -164,7 +197,7 @@ export default function Home() {
 			</Head>
 			<main>
 				<Nav></Nav>
-				<div className="hero mx-auto px-12 fixed bg-neutral-900 w-full">
+				<div className="hero mx-auto px-12 fixed bg-neutral-900 w-full top-[110px] bottom-0">
 					<Hero></Hero>
 				</div>
 
@@ -173,14 +206,14 @@ export default function Home() {
 
 					<div className='px-24 sticky top-36 z-10'>
 						<div id='tab'
-							 className='relative flex flex-row justify-between w-full bg-nytz-cream rounded-full h-[100px] items-center px-10 mt-16 mb-16'>
-							<span id='bubbleTab' className='absolute bg-nytz-dark w-[280px] h-[100px] rounded-full left-0 transition-all'>
+							 className='relative flex flex-row justify-between text-body backdrop-blur-[10px] text-obsidian dark:text-white w-full bg-cloud dark:bg-storm rounded-full h-[85px] items-center px-10 mt-16 mb-16'>
+							<span id='bubbleTab' className='absolute bg-white dark:bg-obsidian w-[280px] h-[60px] rounded-full left-0 transition-all'>
 
 							</span>
 							<p id='tab1' className='z-10 cursor-pointer px-10 py-8' onClick={(e)=> moveTab(e,1)}>3D Projects</p>
 							<p id='tab2' className='z-10 cursor-pointer px-10 py-8' onClick={(e)=> moveTab(e,2)}>UI & UX Design</p>
 							<p id='tab3' className='z-10 cursor-pointer px-10 py-8' onClick={(e)=> moveTab(e,3)}>Coding</p>
-							<p id='tab4' className='z-10 cursor-pointer px-10 py-8' onClick={(e)=> moveTab(e,4)}>Video- & Photography</p>
+							<p id='tab4' className='z-10 cursor-pointer px-10 py-8' onClick={(e)=> moveTab(e,4)}>Video & Photo</p>
 						</div>
 					</div>
 					<div className='bg-zinc-50 dark:bg-neutral-900'>

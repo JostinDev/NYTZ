@@ -15,6 +15,16 @@ module.exports = {
       'code': ['Source Code Pro', 'monospace']
     },
     extend: {
+        animation: {
+          leftToRightStudio: 'LeftToRight 4s infinite linear',
+          leftToRightNytz: 'LeftToRight 3s infinite linear',
+        },
+      keyframes: {
+        LeftToRight: {
+          'from': { transform: 'translateX(0%)' },
+          'to': { transform: 'translateX(-100%)' },
+        }
+      },
       fontSize: {
         'title': ['6rem', {
           lineHeight: '121px',
@@ -26,11 +36,13 @@ module.exports = {
           letterSpacing: '0.02em',
           fontWeight: '300'
         }],
-        'body': ['1.75rem', {
+        'body': ['1rem', {
           lineHeight: '35px',
           letterSpacing: '0.03em',
           fontWeight: '400'
         }],
+        'body-desk': '1.1875rem',
+
         'subtitle1': ['3rem', {
           lineHeight: '60px',
           fontWeight: '700'

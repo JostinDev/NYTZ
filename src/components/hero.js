@@ -1,87 +1,24 @@
 import React, { useEffect } from "react";
 import Image from "next/image";
-import { FastAverageColor } from "fast-average-color";
 
-import whale from "../../public/whale.png";
-import taichi from "../../public/taichi.png";
-import sunrise from "../../public/sunrise.png";
+import studio from "../../public/studio.svg";
+import nytz from "../../public/nytz.svg";
 
 export default function Hero() {
 
-	const images = [whale, taichi, sunrise]
-	const [index, setIndex] = React.useState(1);
-	const [heroColor, setHeroColor] = React.useState();
-	const img = images.map((image, index) =>
-		<Image
-			key={index}
-			id={'heroImage' + index}
-			className={'w-full rounded-3xl absolute transition-opacity duration-300' + (index !== 0 ? ' opacity-0':'') }
-			src={image}
-			alt="Picture of the author"
-			placeholder='blur'
-		/>
-	);
-
-	useEffect(() => {
-		const heroContainer = document.querySelector('#heroContainer')
-		const firstImage = document.querySelector('#heroImage0')
-
-		heroContainer.style.height = firstImage.clientHeight + 'px'
-
-		changeTextColor(firstImage)
-
-		const interval = setInterval(() => document.querySelector('#switch').click(), 2000);
-		return () => {
-			clearInterval(interval);
-		};
-	}, []);
-
-	function changeTextColor(heroImage) {
-		const fac = new FastAverageColor();
-		fac.getColorAsync(heroImage)
-			.then(color => {
-				setHeroColor(color.hex)
-			})
-			.catch(e => {
-				console.log(e);
-			});
-	}
-
-	function imageSwitch() {
-
-		images.forEach((img,int) => {
-			const element = document.querySelector('#heroImage' + int)
-			element.classList.add('opacity-0')
-			element.classList.remove('opacity-100')
-		});
-
-		if (index < images.length - 1) {
-			setIndex(index + 1)
-		}
-		else {
-			setIndex(0)
-		}
-
-		const current = document.querySelector('#heroImage' + index)
-		current.classList.remove('opacity-0')
-		current.classList.add('opacity-100')
-
-		changeTextColor(current)
-	}
-
 	return (
-		<div>
-			<div id='heroContainer' className='relative'>
-				{img}
-				<div className="h-96 bg-gradient-to-t from-neutral-900 absolute bottom-0 w-full"></div>
-				<div className="h-96 bg-gradient-to-t from-neutral-900 absolute bottom-0 w-full"></div>
-			</div>
+			<div className='flex h-full w-full overflow-hidden whitespace-nowrap rotating-gradient rounded-3xl'>
+				<div className='flex w-screen whitespace-nowrap absolute bottom-60 left-0 scale-[1.42]'>
+					<Image alt='studio' src={studio} className="filterSVG animate-leftToRightStudio"/>
+					<Image alt='studio' src={studio} className="filterSVG animate-leftToRightStudio"/>
+					<Image alt='studio' src={studio} className="filterSVG animate-leftToRightStudio"/>
+				</div>
 
-			<div id='heroText' style={{ color: heroColor }} className='-mt-20 z-10 relative ease-in-out duration-300 pb-20'>
-				<h1 className='text-2xl font-bold mt-10'>We help you create your dreams.</h1>
-				<h1 className='text-4xl mt-10 w-1/2'>With us you can elevate your digital experience to the next level.</h1>
-				<p id='switch' className='hidden' onClick={imageSwitch}></p>
+				<div className='flex w-screen whitespace-nowrap absolute bottom-20 left-0'>
+					<Image alt='studio' src={nytz} className="filterSVG animate-leftToRightNytz"/>
+					<Image alt='studio' src={nytz} className="filterSVG animate-leftToRightNytz"/>
+					<Image alt='studio' src={nytz} className="filterSVG animate-leftToRightNytz"/>
+				</div>
 			</div>
-		</div>
 	);
 }
