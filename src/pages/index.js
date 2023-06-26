@@ -31,11 +31,6 @@ export default function Home() {
 		};
 	});
 
-
-
-
-
-
 	function Activity(props) {
 
 		let render
@@ -201,13 +196,20 @@ export default function Home() {
 					<Hero></Hero>
 				</div>
 
-				<div id='firstSection' className='mt-10 rounded-t-3xl pt-40 pb-16 bg-zinc-50 dark:bg-neutral-900 relative'>
-					<p className='text-7xl text-dark dark:text-white px-24'><span className='text-xl'>01</span>What we do</p>
+				<div id='firstSection' className='mt-10 rounded-t-3xl pt-40 pb-16 bg-white dark:bg-black relative'>
 
-					<div className='px-24 sticky top-36 z-10'>
+					<div className='container mx-auto'>
+						<p className='text-hero text-obsidian dark:text-white relative'><span className='text-ornament absolute bottom-[13px] -ml-10'>01</span>What we do</p>
+
+						<p className='text-subtitle1 text-obsidian dark:text-white mt-40'>We help creating your dreams.</p>
+						<p className='text-statement text-obsidian dark:text-white'>With us you can elevate your digital experience to the next level.</p>
+					</div>
+
+
+					<div className='sticky top-36 z-10 container mx-auto'>
 						<div id='tab'
-							 className='relative flex flex-row justify-between text-body backdrop-blur-[10px] text-obsidian dark:text-white w-full bg-cloud dark:bg-storm rounded-full h-[85px] items-center px-10 mt-16 mb-16'>
-							<span id='bubbleTab' className='absolute bg-white dark:bg-obsidian w-[280px] h-[60px] rounded-full left-0 transition-all'>
+							 className='relative flex flex-row justify-between text-body backdrop-blur-[10px] text-obsidian dark:text-white w-full bg-cloud dark:bg-storm rounded-full h-[67px] sm:h-[85px] items-center px-10 mt-16 mb-16'>
+							<span id='bubbleTab' className='absolute bg-white dark:bg-obsidian w-[280px] h-[43px] sm:h-[60px] rounded-full left-0 transition-all'>
 
 							</span>
 							<p id='tab1' className='z-10 cursor-pointer px-10 py-8' onClick={(e)=> moveTab(e,1)}>3D Projects</p>

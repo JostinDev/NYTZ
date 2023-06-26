@@ -49,21 +49,21 @@ export default function Menu() {
 			<div
 				onClick={()=>toggleMenu(true)}
 				id='menuToggle'
-				className='flex transition-all text-button hover:text-button-action active:text-button-action items-center justify-center w-[167px] h-[62px] border hover:border-[3px] rounded-full border-cloud text-cloud active:text-obsidian active:border-0 active:bg-cloud cursor-pointer select-none'>
+				className='flex transition-all text-button sm:hover:text-button-action-desk hover:text-button-action active:text-button-action items-center justify-center w-[167px] h-[62px] border hover:border-[3px] rounded-full border-cloud text-cloud active:text-obsidian active:border-0 active:bg-cloud cursor-pointer select-none'>
 				Menu
 			</div>
 
 			<div
 				id='mobileMenu'
-				className='fixed flex flex-col pt-8 pr-12 pl-28 top-0 left-0 right-0 bg-white hidden' style={{height: 100 + 'svh'}}>
+				className='fixed flex flex-col pt-8 pr-12 pl-28 top-0 left-0 right-0 bg-white dark:bg-black hidden' style={{height: 100 + 'svh'}}>
 
 				<div
 					onClick={()=>toggleMenu(false)}
-					className='flex transition-all text-button hover:text-button-action active:text-button-action items-center ml-auto justify-center w-[167px] h-[62px] border hover:border-[3px] rounded-full border-obsidian text-obsidian active:text-cloud active:border-0 active:bg-obsidian cursor-pointer select-none'>
+					className='flex transition-all text-button sm:hover:text-button-action-desk hover:text-button-action active:text-button-action-desk items-center ml-auto justify-center w-[167px] h-[62px] border hover:border-[3px] rounded-full border-obsidian dark:border-cloud text-obsidian dark:text-cloud active:text-cloud dark:active:text-obsidian active:border-0 active:bg-obsidian dark:active:bg-cloud cursor-pointer select-none'>
 					Close
 				</div>
 
-				<div className='text-nytz-dark'>
+				<div className='text-obsidian dark:text-white'>
 					<div className='transition-all overflow-hidden relative h-32 mb-10'>
 						<span className='text-ornament absolute bottom-5'>01</span>
 						<p id='menu1' className='text-title absolute ml-10 -bottom-32 inline-block cursor-pointer transition-all hover:skew-x-[-10deg]'>What we do</p>

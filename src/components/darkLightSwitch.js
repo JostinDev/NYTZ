@@ -46,22 +46,22 @@ export default function DarkLightSwitch() {
 
             <div
 				onClick={themeSwitch}
-				className="relative flex cursor-pointer items-center p-1.5 transition-all duration-300 bg-cloud h-[62px] dark:bg-storm w-[120px] rounded-full select-none"
+				className="relative flex cursor-pointer items-center p-1.5 transition-all duration-300 bg-cloud h-[44px] sm:h-[62px] dark:bg-storm w-[88px] sm:w-[120px] rounded-full select-none"
                 id="darkModeToggle">
 
 				<span
-					className="absolute inline-block w-[50px] h-[50px] bg-white transition-all duration-300 dark:bg-black translate-x-0 dark:translate-x-[58px] rounded-full">
+					className="absolute inline-block w-[36px] h-[36px] sm:w-[50px] sm:h-[50px] bg-white transition-all duration-300 dark:bg-black translate-x-0 dark:translate-x-[40px] sm:dark:translate-x-[58px] rounded-full">
 				</span>
 
-                <div className="relative z-10 flex w-1/2 items-center">
-					<Image className='w-10 dark:hidden ml-[5px]' src={sun} alt='darkMode'/>
-					<Image className='w-10 hidden dark:block ml-[5px]' src={sunDark} alt='darkMode'/>
+                <div className="relative z-10 flex w-1/2 sm:items-center">
+					<Image className='w-7 sm:w-10 dark:hidden ml-[4px] sm:ml-[5px]' src={sun} alt='darkMode'/>
+					<Image className='w-7 sm:w-10 hidden dark:block ml-[4px] sm:ml-[5px]' src={sunDark} alt='darkMode'/>
                 </div>
 
                 <div
                     className="relative z-10 flex w-1/2 items-center justify-center">
-					<Image className='w-10 dark:hidden ml-[5px]' src={moon} alt='darkMode'/>
-					<Image className='w-10 hidden dark:block ml-[5px]' src={moonDark} alt='darkMode'/>
+					<Image className='w-7 sm:w-10 dark:hidden ml-[3px] sm:ml-[5px]' src={moon} alt='darkMode'/>
+					<Image className='w-7 sm:w-10 hidden dark:block ml-[3px] sm:ml-[5px]' src={moonDark} alt='darkMode'/>
                 </div>
             </div>
 

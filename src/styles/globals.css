@@ -5,19 +5,59 @@
 @tailwind utilities;
 
 .text-title, .text-body, .text-hero,
-.text-cardText1, .text-cardText2, .text-cardText3,
-.text-button, .text-button-action
+.text-cardText1, .text-cardText2,
+.text-button, .text-button-action, .text-statement
 {
    @apply font-body;
 }
 
-.text-subtitle1, .text-subtitle2, .text-subtitle3, .text-ornament {
+.text-subtitle1, .text-subtitle2, .text-ornament {
     @apply font-code;
 }
 
 @screen sm {
+    .text-title {
+        @apply text-title-desk;
+    }
+
     .text-body {
         @apply text-body-desk;
+    }
+
+    .text-hero {
+        @apply text-hero-desk;
+    }
+
+    .text-statement {
+        @apply text-statement-desk;
+    }
+
+    .text-cardText1 {
+        @apply text-cardText1-desk;
+    }
+
+    .text-cardText2 {
+        @apply text-cardText2-desk;
+    }
+
+    .text-button {
+        @apply text-button-desk;
+    }
+
+    .text-button-action {
+        @apply text-button-action-desk;
+    }
+
+    .text-subtitle1 {
+        @apply text-subtitle1-desk;
+    }
+
+    .text-subtitle2 {
+        @apply text-subtitle2-desk;
+    }
+
+    .text-ornament {
+        @apply text-ornament-desk;
     }
 }
 

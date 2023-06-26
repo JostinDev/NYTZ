@@ -9,7 +9,6 @@ export default function LangSwitch() {
 
     let bubble
 
-
     useEffect(() => {
         bubble = document.querySelector('#bubble')
 
@@ -18,31 +17,32 @@ export default function LangSwitch() {
 
     function switchLangTo(lang) {
 
+       let translate;
+
         switch (lang) {
             case 'FR':
-                bubble.style.transform = 'translateX(0px)'
+                translate = window.innerWidth < 640 ? 'translateX(0px)' : 'translateX(0px)'
                 break;
             case 'DE':
-                bubble.style.transform = 'translateX(61px)'
+                translate = window.innerWidth < 640 ? 'translateX(44px)' : 'translateX(61px)'
                 break;
             case 'EN':
-                bubble.style.transform = 'translateX(121px)'
+                translate = window.innerWidth < 640 ? 'translateX(88px)' : 'translateX(121px)'
                 break;
         }
+        bubble.style.transform = translate;
     }
-
-
 
     return (
 
             <div
-				className="relative flex cursor-pointer items-center p-1.5 text-button transition-all duration-300
-				bg-cloud h-[62px] dark:bg-storm dark:text-white w-[183px] rounded-full select-none"
+				className="relative flex cursor-pointer items-center p-1 sm:p-1.5 text-button transition-all duration-300
+				bg-cloud h-[44px] sm:h-[62px] dark:bg-storm dark:text-white w-[132px] sm:w-[183px] rounded-full select-none"
                 id="darkModeToggle">
 
 				<span
                     id='bubble'
-					className="absolute inline-block w-[50px] h-[50px] bg-white transition-all duration-300 dark:bg-black translate-x-0 rounded-full">
+					className="absolute inline-block w-[36px] h-[36px] sm:w-[50px] sm:h-[50px] bg-white transition-all duration-300 dark:bg-black translate-x-0 rounded-full">
 				</span>
 
                 <div

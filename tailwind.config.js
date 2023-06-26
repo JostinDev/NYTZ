@@ -26,16 +26,27 @@ module.exports = {
         }
       },
       fontSize: {
-        'title': ['6rem', {
+        'title': ['2.25rem', {
           lineHeight: '121px',
           letterSpacing: '0.01em',
           fontWeight: '300'
         }],
-        'hero': ['4.5rem', {
+        'title-desk': '6rem',
+
+        'hero': ['2.125rem', {
           lineHeight: '91px',
           letterSpacing: '0.02em',
           fontWeight: '300'
         }],
+        'hero-desk': '4.5rem',
+
+        'statement': ['1.625rem', {
+          lineHeight: '91px', //TODO
+          letterSpacing: '0.07em',
+          fontWeight: '300'
+        }],
+        'statement-desk': '3.5rem',
+
         'body': ['1rem', {
           lineHeight: '35px',
           letterSpacing: '0.03em',
@@ -43,39 +54,47 @@ module.exports = {
         }],
         'body-desk': '1.1875rem',
 
-        'subtitle1': ['3rem', {
+        'subtitle1': ['1.25rem', {
           lineHeight: '60px',
           fontWeight: '700'
         }],
-        'subtitle2': ['2rem', {
+        'subtitle1-desk': '2rem',
+
+        'subtitle2': ['0.875rem', {
           lineHeight: '40px',
           fontWeight: '700'
         }],
-        'subtitle3': ['1.5rem', {
-          lineHeight: '30px',
-          fontWeight: '700'
-        }],
-        'cardText1': ['3.5rem', {
+        'subtitle2-desk': '1.25rem',
+
+        'cardText1': ['1.625rem', {
           lineHeight: '70px',
           fontWeight: '400'
         }],
-        'cardText2': ['2.5rem', {
+        'cardText1-desk': '3rem',
+
+        'cardText2': ['1.375rem', {
           lineHeight: '50px',
           fontWeight: '400'
         }],
-        'cardText3': ['2rem', {
-          lineHeight: '40px',
-          fontWeight: '400'
-        }],
-        'ornament': ['1.5rem', {
+        'cardText2-desk': '1.75rem',
+
+        'ornament': ['0.8125rem', {
           lineHeight: '30px',
           fontWeight: '300'
         }],
-        'button': ['1.5rem', {
+        'ornament-desk': '1.5rem',
+
+        'button': ['1rem', {
           lineHeight: '30px',
           fontWeight: '300'
         }],
-        'button-action': ['1.5rem', {
+        'button-desk': '1.5rem',
+
+        'button-action': ['1rem', {
+          lineHeight: '30px',
+          fontWeight: '600'
+        }],
+        'button-action-desk': ['1.5rem', {
           lineHeight: '30px',
           fontWeight: '600'
         }],
