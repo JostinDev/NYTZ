@@ -1,17 +1,9 @@
 import React from "react";
-import { Disclosure } from "@headlessui/react";
-import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
-import DarkLightSwitch from "@/components/darkLightSwitch";
 import Menu from "@/components/menu";
 
 
 
 export default function Nav() {
-
-	function classNames(...classes) {
-		return classes.filter(Boolean).join(' ')
-	}
-
 
 	return (
 		<div className='sticky top-0 z-50 bg-neutral-900'>
