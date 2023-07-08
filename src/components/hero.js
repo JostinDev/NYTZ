@@ -33,7 +33,7 @@ export default function Hero() {
 
 	return (
 			<div className={'flex h-[96%] w-full  whitespace-nowrap rotating-gradient rounded-3xl'}>
-				<div className={'flex absolute bottom-40 sm:bottom-60 scale-[1.4]'} >
+				<div className={classStudio} >
 					<Image priority={true} alt='studio' src={studio} className={classStudioElement}/>
 					<Image priority={true} alt='studio' src={studio} className={classStudioElement}/>
 					<Image priority={true} alt='studio' src={studio} className={classStudioElement}/>
