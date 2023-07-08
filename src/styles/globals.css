@@ -81,7 +81,6 @@
 }
 
 
-
 .rotating-gradient {
     background: url(../../public/noise-texture-200x200.png), 100px 100px repeat, linear-gradient(46deg, rgba(73, 9, 103, 0.81) 20.83%, rgba(17, 141, 181, 0.79) 97.92%);
 }
