@@ -16,10 +16,10 @@ export default function Hero() {
 				</div>
 
 				<div className='flex w-screen whitespace-nowrap absolute bottom-20 left-0 animate-leftToRightNytz'>
-					<Image alt='studio' src={nytz} className=""/>
-					<Image alt='studio' src={nytz} className=""/>
-					<Image alt='studio' src={nytz} className=""/>
-					<Image alt='studio' src={nytz} className=""/>
+					<Image alt='studio' src={nytz}/>
+					<Image alt='studio' src={nytz}/>
+					<Image alt='studio' src={nytz}/>
+					<Image alt='studio' src={nytz}/>
 				</div>
 			</div>
 	);
