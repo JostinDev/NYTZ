@@ -10,7 +10,14 @@ export default function Hero() {
 
 
 	useEffect(() => {
-		checkSize()
+		function handleResize() {
+			checkSize()
+		}
+
+		window.addEventListener("resize", handleResize);
+		return () => {
+			window.removeEventListener("resize", handleResize);
+		};
 	},[]);
 
 	function checkSize() {
