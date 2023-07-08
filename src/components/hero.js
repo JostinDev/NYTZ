@@ -10,10 +10,12 @@ export default function Hero() {
 
 
 	useEffect(() => {
-		setIsMobile(window.innerWidth < 640)
-
-
+		checkSize()
 	},[]);
+
+	function checkSize() {
+		setIsMobile(window.innerWidth < 640)
+	}
 
 	let classStudio = 'flex absolute bottom-40 sm:bottom-60 scale-[1.4]' + (isMobile ? ' animate-leftToRightStudio' : '')
 	let classStudioElement = (isMobile ? '' : ' animate-leftToRightStudio')
