@@ -7,15 +7,15 @@ import nytz from "../../public/nytz.svg";
 export default function Hero() {
 
 	return (
-			<div className='flex h-full w-full overflow-hidden whitespace-nowrap rotating-gradient rounded-3xl'>
-				<div className='flex w-screen whitespace-nowrap absolute bottom-60 left-0 scale-[1.42]'>
+			<div className='flex h-[96%] w-full overflow-hidden whitespace-nowrap rotating-gradient rounded-3xl select-none'>
+				<div className='flex w-screen whitespace-nowrap absolute bottom-80 left-0 scale-[1.42]'>
 					<Image alt='studio' src={studio} className="filterSVG animate-leftToRightStudio"/>
 					<Image alt='studio' src={studio} className="filterSVG animate-leftToRightStudio"/>
 					<Image alt='studio' src={studio} className="filterSVG animate-leftToRightStudio"/>
 					<Image alt='studio' src={studio} className="filterSVG animate-leftToRightStudio"/>
 				</div>
 
-				<div className='flex w-screen whitespace-nowrap absolute bottom-20 left-0'>
+				<div className='flex w-screen whitespace-nowrap absolute bottom-28 left-0'>
 					<Image alt='studio' src={nytz} className="filterSVG animate-leftToRightNytz"/>
 					<Image alt='studio' src={nytz} className="filterSVG animate-leftToRightNytz"/>
 					<Image alt='studio' src={nytz} className="filterSVG animate-leftToRightNytz"/>

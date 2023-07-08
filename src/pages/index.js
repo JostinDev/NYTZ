@@ -65,18 +65,13 @@ export default function Home() {
 					placeholder='blur'
 				/>
 				<div className='px-24'>
-					<h1 className='text-5xl mt-14'>Why 3D?</h1>
-					<p className='h-1 w-20 bg-nytz-dark mt-8 rounded'></p>
-					<h3 className='text-3xl mt-16'>3D is the best way to make your product stand out from the crowd.</h3>
-					<h3 className='text-3xl mt-16'>3D is the best way to make your product stand out from the crowd.</h3>
-					<h3 className='text-3xl mt-16'>3D is the best way to make your product stand out from the crowd.</h3>
-					<h3 className='text-3xl mt-16'>3D is the best way to make your product stand out from the crowd.</h3>
-					<h3 className='text-3xl mt-16'>3D is the best way to make your product stand out from the crowd.</h3>
+					<h1 className='text-subtitle1 mt-14'>Why 3D?</h1>
+					<div className='h-1 w-9 bg-obsidian dark:bg-white mt-3'></div>
+					<p className='text-cardText1 mt-4'>3D is the best way to make your product stand out from the crowd.</p>
 				</div>
 
-				<div className='flex gap-4 px-24 mt-28'>
+				<div className='flex gap-8 px-24 mt-28'>
 
-					<Card></Card>
 					<Card></Card>
 					<Card></Card>
 
@@ -198,10 +193,10 @@ export default function Home() {
 
 				<div id='firstSection' className='mt-10 rounded-t-3xl pt-40 pb-16 bg-white dark:bg-black relative'>
 
-					<div className='container mx-auto'>
+					<div className='container mx-auto px-10'>
 						<p className='text-hero text-obsidian dark:text-white relative'><span className='text-ornament absolute bottom-[13px] -ml-10'>01</span>What we do</p>
 
-						<p className='text-subtitle1 text-obsidian dark:text-white mt-40'>We help creating your dreams.</p>
+						<p className='text-subtitle1 text-obsidian dark:text-white mt-24 md:mt-72 lg:mt-80'>We help creating your dreams.</p>
 						<p className='text-statement text-obsidian dark:text-white'>With us you can elevate your digital experience to the next level.</p>
 					</div>
 
@@ -219,7 +214,7 @@ export default function Home() {
 							<p id='tab3' className='z-10 cursor-pointer px-10 py-8' onClick={(e)=> moveTab(e,3)}>Coding</p>
 							<p id='tab4' className='z-10 cursor-pointer px-10 py-8' onClick={(e)=> moveTab(e,4)}>Video & Photo</p>
 						</div>
-						<div className='border-gradient'></div>
+						<div className='border-gradient -z-50 rounded-full'></div>
 					</div>
 					<div className='bg-zinc-50 dark:bg-neutral-900'>
 						<Activity step={tabState}></Activity>
