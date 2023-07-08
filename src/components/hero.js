@@ -18,7 +18,7 @@ export default function Hero() {
 		return () => {
 			window.removeEventListener("resize", handleResize);
 		};
-	},[]);
+	},);
 
 	function checkSize() {
 		setIsMobile(window.innerWidth < 640)
