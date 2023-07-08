@@ -22,7 +22,7 @@ export default function Home() {
 			</Head>
 			<main>
 				<Nav></Nav>
-				<div className="hero mx-auto px-12 fixed bg-neutral-900 w-full top-[110px] bottom-0">
+				<div className="hero mx-auto px-8 sm:px-12 fixed bg-neutral-900 w-full top-[110px] bottom-0">
 					<Hero></Hero>
 				</div>
 
