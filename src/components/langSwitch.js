@@ -1,9 +1,5 @@
 import React, {useEffect} from "react";
-import moon from "../../public/moon.svg";
-import moonDark from "../../public/moon-dark.svg";
-import sun from "../../public/sun.svg";
-import sunDark from "../../public/sun-dark.svg";
-import Image from "next/image";
+
 
 export default function LangSwitch() {
 
