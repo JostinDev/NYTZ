@@ -6,7 +6,7 @@ import nytz from "../../public/nytz.svg";
 
 export default function Hero() {
 
-	const [isMobile, setIsMobile] = useState(true)
+	const [isMobile, setIsMobile] = useState(false)
 
 
 	useEffect(() => {
@@ -15,27 +15,31 @@ export default function Hero() {
 
 	},[]);
 
-	let className = 'flex absolute bottom-40 sm:bottom-60 scale-[1.4]' + (isMobile ? ' animate-leftToRightStudio' : '')
+	let classStudio = 'flex absolute bottom-40 sm:bottom-60 scale-[1.4]' + (isMobile ? ' animate-leftToRightStudio' : '')
+	let classStudioElement = (isMobile ? '' : ' animate-leftToRightStudio')
+
+	let classNytz = 'flex absolute bottom-20 ' + (isMobile ? ' animate-leftToRightNytz' : '')
+	let classNytzElement = (isMobile ? '':'animate-leftToRightNytz')
 
 
 	return (
 			<div className={'flex h-[96%] w-full  whitespace-nowrap rotating-gradient rounded-3xl'}>
-				<div className={className} >
-					<Image loading = 'eager' alt='studio' src={studio} className={isMobile ? '':'animate-leftToRightStudio'}/>
-					<Image loading = 'eager' alt='studio' src={studio} className={isMobile ? '':'animate-leftToRightStudio'}/>
-					<Image loading = 'eager' alt='studio' src={studio} className={isMobile ? '':'animate-leftToRightStudio'}/>
-					<Image loading = 'eager' alt='studio' src={studio} className={isMobile ? '':'animate-leftToRightStudio'}/>
-					<Image loading = 'eager' alt='studio' src={studio} className={isMobile ? '':'animate-leftToRightStudio'}/>
-					<Image loading = 'eager' alt='studio' src={studio} className={isMobile ? '':'animate-leftToRightStudio'}/>
+				<div className={classStudio} >
+					<Image priority={true} alt='studio' src={studio} className={classStudioElement}/>
+					<Image priority={true} alt='studio' src={studio} className={classStudioElement}/>
+					<Image priority={true} alt='studio' src={studio} className={classStudioElement}/>
+					<Image priority={true} alt='studio' src={studio} className={classStudioElement}/>
+					<Image priority={true} alt='studio' src={studio} className={classStudioElement}/>
+					<Image priority={true} alt='studio' src={studio} className={classStudioElement}/>
 				</div>
 
-				<div className={isMobile ? 'flex absolute bottom-20 animate-leftToRightNytz':'flex absolute bottom-20'} >
-					<Image loading = 'eager' alt='studio' src={nytz} className={isMobile ? '':'animate-leftToRightNytz'}/>
-					<Image loading = 'eager' alt='studio' src={nytz} className={isMobile ? '':'animate-leftToRightNytz'}/>
-					<Image loading = 'eager' alt='studio' src={nytz} className={isMobile ? '':'animate-leftToRightNytz'}/>
-					<Image loading = 'eager' alt='studio' src={nytz} className={isMobile ? '':'animate-leftToRightNytz'}/>
-					<Image loading = 'eager' alt='studio' src={nytz} className={isMobile ? '':'animate-leftToRightNytz'}/>
-					<Image loading = 'eager' alt='studio' src={nytz} className={isMobile ? '':'animate-leftToRightNytz'}/>
+				<div className={classNytz} >
+					<Image priority={true} alt='studio' src={nytz} className={classNytzElement}/>
+					<Image priority={true} alt='studio' src={nytz} className={classNytzElement}/>
+					<Image priority={true} alt='studio' src={nytz} className={classNytzElement}/>
+					<Image priority={true} alt='studio' src={nytz} className={classNytzElement}/>
+					<Image priority={true} alt='studio' src={nytz} className={classNytzElement}/>
+					<Image priority={true} alt='studio' src={nytz} className={classNytzElement}/>
 				</div>
 			</div>
 	);
