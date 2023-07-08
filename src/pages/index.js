@@ -1,12 +1,8 @@
 import Head from 'next/head'
-import React, {useEffect, useState} from "react";
+import React from "react";
 import Hero from "../components/hero"
 import Nav from "../components/nav"
-import Image from "next/image";
-import whale from "../../public/whale.png";
-import taichi from "../../public/taichi.png";
-import sunrise from "../../public/sunrise.png";
-import Card from "@/components/card";
+
 
 export default function Home() {
 
