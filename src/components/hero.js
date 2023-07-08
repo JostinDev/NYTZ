@@ -8,7 +8,7 @@ export default function Hero() {
 
 	return (
 			<div className='flex h-full w-full overflow-hidden whitespace-nowrap rotating-gradient rounded-3xl'>
-				<div className='flex w-screen whitespace-nowrap absolute bottom-60 left-0  animate-leftToRightStudio' >
+				<div className='flex w-screen whitespace-nowrap absolute bottom-40 sm:bottom-60 left-0  animate-leftToRightStudio' >
 					<Image alt='studio' src={studio} className="scale-[1.2]"/>
 					<Image alt='studio' src={studio} className="scale-[1.2]"/>
 					<Image alt='studio' src={studio} className="scale-[1.2]"/>
