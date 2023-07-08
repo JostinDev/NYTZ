@@ -7,9 +7,6 @@ export default function Menu() {
 	let test;
 	useEffect(() => {
 		test = document.querySelector('#mobileMenu')
-
-
-
 	}, );
 
 	function displayMenu() {
@@ -49,7 +46,7 @@ export default function Menu() {
 			<div
 				onClick={()=>toggleMenu(true)}
 				id='menuToggle'
-				className='flex transition-all text-button sm:hover:text-button-action-desk hover:text-button-action active:text-button-action items-center justify-center w-[167px] h-[62px] border hover:border-[3px] rounded-full border-cloud text-cloud active:text-obsidian active:border-0 active:bg-cloud cursor-pointer select-none'>
+				className='flex transition-all duration-75 text-button sm:hover:text-button-action-desk hover:text-button-action active:text-button-action sm:active:text-button-action-desk items-center justify-center w-[101px] h-[44px] sm:w-[167px] sm:h-[62px] border hover:border-[3px] rounded-full border-cloud text-cloud active:text-obsidian active:border-0 active:bg-cloud cursor-pointer select-none'>
 				Menu
 			</div>
 
@@ -59,7 +56,7 @@ export default function Menu() {
 
 				<div
 					onClick={()=>toggleMenu(false)}
-					className='flex transition-all text-button sm:hover:text-button-action-desk hover:text-button-action active:text-button-action-desk items-center ml-auto justify-center w-[167px] h-[62px] border hover:border-[3px] rounded-full border-obsidian dark:border-cloud text-obsidian dark:text-cloud active:text-cloud dark:active:text-obsidian active:border-0 active:bg-obsidian dark:active:bg-cloud cursor-pointer select-none'>
+					className='flex transition-all duration-75 text-button sm:hover:text-button-action-desk hover:text-button-action active:text-button-action sm:active:text-button-action-desk items-center ml-auto justify-center w-[101px] h-[44px] sm:w-[167px] sm:h-[62px] border hover:border-[3px] rounded-full border-obsidian dark:border-cloud text-obsidian dark:text-cloud active:text-cloud dark:active:text-obsidian active:border-0 active:bg-obsidian dark:active:bg-cloud cursor-pointer select-none'>
 					Close
 				</div>
 

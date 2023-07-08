@@ -12,9 +12,11 @@ export default function Hero() {
 					<Image alt='studio' src={studio} className="filterSVG animate-leftToRightStudio"/>
 					<Image alt='studio' src={studio} className="filterSVG animate-leftToRightStudio"/>
 					<Image alt='studio' src={studio} className="filterSVG animate-leftToRightStudio"/>
+					<Image alt='studio' src={studio} className="filterSVG animate-leftToRightStudio"/>
 				</div>
 
 				<div className='flex w-screen whitespace-nowrap absolute bottom-20 left-0'>
+					<Image alt='studio' src={nytz} className="filterSVG animate-leftToRightNytz"/>
 					<Image alt='studio' src={nytz} className="filterSVG animate-leftToRightNytz"/>
 					<Image alt='studio' src={nytz} className="filterSVG animate-leftToRightNytz"/>
 					<Image alt='studio' src={nytz} className="filterSVG animate-leftToRightNytz"/>

@@ -208,7 +208,9 @@ export default function Home() {
 
 					<div className='sticky top-36 z-10 container mx-auto'>
 						<div id='tab'
-							 className='relative flex flex-row justify-between text-body backdrop-blur-[10px] text-obsidian dark:text-white w-full bg-cloud dark:bg-storm rounded-full h-[67px] sm:h-[85px] items-center px-10 mt-16 mb-16'>
+							 className='relative flex flex-row justify-between text-body backdrop-blur-[10px]
+							  text-obsidian dark:text-white w-full bg-cloud dark:bg-storm rounded-full h-[67px] sm:h-[85px]
+							   items-center px-10 mt-16 mb-16'>
 							<span id='bubbleTab' className='absolute bg-white dark:bg-obsidian w-[280px] h-[43px] sm:h-[60px] rounded-full left-0 transition-all'>
 
 							</span>
@@ -217,6 +219,7 @@ export default function Home() {
 							<p id='tab3' className='z-10 cursor-pointer px-10 py-8' onClick={(e)=> moveTab(e,3)}>Coding</p>
 							<p id='tab4' className='z-10 cursor-pointer px-10 py-8' onClick={(e)=> moveTab(e,4)}>Video & Photo</p>
 						</div>
+						<div className='border-gradient'></div>
 					</div>
 					<div className='bg-zinc-50 dark:bg-neutral-900'>
 						<Activity step={tabState}></Activity>

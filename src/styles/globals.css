@@ -61,6 +61,27 @@
     }
 }
 
+.border-gradient {
+
+    /*border-image: linear-gradient(90deg, rgba(227,226,227,0.87) 0%, rgba(250,249,249,0.92) 100%) 1;*/
+}
+
+
+
+.dark .border-gradient {
+    position: absolute;
+    top: -4px; bottom: -4px;
+    left: -4px; right: -4px;
+    background: linear-gradient(18deg, rgba(65,65,65,1) 0%, rgba(65,65,65,0) 100%);
+    content: '';
+    z-index: -100;
+    border-radius: 100px;
+
+    /*border-image: linear-gradient(18deg, rgba(65,65,65,1) 0%, rgba(65,65,65,0) 100%) 1;*/
+}
+
+
+
 .rotating-gradient {
     background: url(../../public/noise-texture-200x200.png), 100px 100px repeat, linear-gradient(46deg, rgba(73, 9, 103, 0.81) 20.83%, rgba(17, 141, 181, 0.79) 97.92%);
 }
