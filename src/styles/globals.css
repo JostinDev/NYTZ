@@ -77,6 +77,7 @@
     left: -2px; right: -2px;
     background: linear-gradient(90deg, rgba(227,226,227,1) 0%, rgba(250,249,249,1) 100%);
     content: '';
+    margin: 10px;
 }
 
 .sticky .border-gradient {
@@ -95,4 +96,13 @@
 
 .rotating-gradient {
     background: url(../../public/noise-texture-200x200.png), 100px 100px repeat, linear-gradient(46deg, rgba(73, 9, 103, 0.81) 20.83%, rgba(17, 141, 181, 0.79) 97.92%);
+}
+
+
+.fuckScrollBar {
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;  /* Firefox */
+}
+.fuckScrollBar::-webkit-scrollbar {
+    display: none;  /* Safari and Chrome */
 }

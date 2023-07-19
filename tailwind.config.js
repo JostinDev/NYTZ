@@ -105,6 +105,8 @@ module.exports = {
         'midnight': '#3D3D3F',
         'storm': 'rgba(61, 61, 63, 0.8)',
         'obsidian': '#272727',
+
+        'modal-backdrop': '#383838',
       },
     },
   },

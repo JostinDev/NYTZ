@@ -56,24 +56,35 @@ export default function Home() {
 
 	function ThreeD() {
 		return (
-			<div>
+			<div className={'relative'}>
 				<Image
 					id='heroImage'
-					className='w-full rounded-3xl'
+					className='w-full max-h-[900px]'
 					src={taichi}
 					alt="Picture of the author"
 					placeholder='blur'
+					style={{objectFit:"cover"}}
 				/>
-				<div className='px-24'>
+				<div className='container mx-auto px-5'>
 					<h1 className='text-subtitle1 mt-14'>Why 3D?</h1>
 					<div className='h-1 w-9 bg-obsidian dark:bg-white mt-3'></div>
 					<p className='text-cardText1 mt-4'>3D is the best way to make your product stand out from the crowd.</p>
 				</div>
 
-				<div className='flex gap-8 px-24 mt-28'>
+				<div className='flex gap-8 mt-28 flex-wrap lg:flex-nowrap container mx-auto px-5'>
 
-					<Card></Card>
-					<Card></Card>
+					<Card
+						title={'Our process'}
+						description={'We believe in the agile process. We would love to discuss our approach with you'}
+						more={'We believe in the agile process. We would love to discuss our approach with you. We believe in the agile process. We would love to discuss our approach with you.'}
+					></Card>
+
+
+					<Card
+						title={'Our process'}
+						description={'We believe in the agile process. We would love to discuss our approach with you'}
+						more={'We believe in the agile process. We would love to discuss our approach with you. We believe in the agile process. We would love to discuss our approach with you.'}
+					></Card>
 
 				</div>
 			</div>
@@ -193,7 +204,7 @@ export default function Home() {
 
 				<div id='firstSection' className='mt-10 rounded-t-3xl pt-40 pb-16 bg-white dark:bg-black relative'>
 
-					<div className='container mx-auto px-10'>
+					<div className='container mx-auto px-10 mb-24 md:mb-72 lg:mb-80'>
 						<p className='text-hero text-obsidian dark:text-white relative'><span className='text-ornament absolute bottom-[13px] -ml-10'>01</span>What we do</p>
 
 						<p className='text-subtitle1 text-obsidian dark:text-white mt-24 md:mt-72 lg:mt-80'>We help creating your dreams.</p>
@@ -201,20 +212,18 @@ export default function Home() {
 					</div>
 
 
-					<div className='sticky top-36 z-10 container mx-auto'>
+					<div className='sticky top-36 z-10 container mx-auto overflow-x-scroll sm:overflow-x-visible sm:my-16 fuckScrollBar'>
 						<div id='tab'
 							 className='relative flex flex-row justify-between text-body backdrop-blur-[10px]
 							  text-obsidian dark:text-white w-full bg-cloud dark:bg-storm rounded-full h-[67px] sm:h-[85px]
-							   items-center px-10 mt-16 mb-16'>
-							<span id='bubbleTab' className='absolute bg-white dark:bg-obsidian w-[280px] h-[43px] sm:h-[60px] rounded-full left-0 transition-all'>
-
-							</span>
-							<p id='tab1' className='z-10 cursor-pointer px-10 py-8' onClick={(e)=> moveTab(e,1)}>3D Projects</p>
-							<p id='tab2' className='z-10 cursor-pointer px-10 py-8' onClick={(e)=> moveTab(e,2)}>UI & UX Design</p>
-							<p id='tab3' className='z-10 cursor-pointer px-10 py-8' onClick={(e)=> moveTab(e,3)}>Coding</p>
-							<p id='tab4' className='z-10 cursor-pointer px-10 py-8' onClick={(e)=> moveTab(e,4)}>Video & Photo</p>
+							   items-center px-10 min-w-[600px] m-[10px] sm:m-0'>
+							<span id='bubbleTab' className='absolute bg-white dark:bg-obsidian w-[280px] h-[43px] sm:h-[60px] rounded-full left-0 transition-all'></span>
+							<p id='tab1' className='z-10 cursor-pointer px-4 lg:px-10 py-8' onClick={(e)=> moveTab(e,1)}>3D Projects</p>
+							<p id='tab2' className='z-10 cursor-pointer px-4 lg:px-10 py-8' onClick={(e)=> moveTab(e,2)}>UI & UX Design</p>
+							<p id='tab3' className='z-10 cursor-pointer px-4 lg:px-10 py-8' onClick={(e)=> moveTab(e,3)}>Coding</p>
+							<p id='tab4' className='z-10 cursor-pointer px-4 lg:px-10 py-8' onClick={(e)=> moveTab(e,4)}>Video & Photo</p>
 						</div>
-						<div className='border-gradient -z-50 rounded-full'></div>
+						<div className='border-gradient sm:m-0 -z-50 rounded-full min-w-[600px]'></div>
 					</div>
 					<div className='bg-zinc-50 dark:bg-neutral-900'>
 						<Activity step={tabState}></Activity>
