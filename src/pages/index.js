@@ -7,8 +7,22 @@ import whale from "../../public/whale.png";
 import taichi from "../../public/taichi.png";
 import sunrise from "../../public/sunrise.png";
 import Card from "@/components/card";
+import {useTranslation} from "next-i18next";
+import {serverSideTranslations} from "next-i18next/serverSideTranslations";
+
+export async function getStaticProps({ locale }) {
+	return {
+		props: {
+			...(await serverSideTranslations(locale, [
+				'common'
+			])),
+			// Will be passed to the page component as props
+		},
+	}
+}
 
 export default function Home() {
+	const { t } = useTranslation('common')
 
 	const [tabState, setTabState] = useState(1)
 
@@ -30,6 +44,7 @@ export default function Home() {
 			window.removeEventListener("resize", handleResize);
 		};
 	});
+
 
 	function Activity(props) {
 
@@ -205,7 +220,7 @@ export default function Home() {
 				<div id='firstSection' className='mt-10 rounded-t-3xl pt-40 pb-16 bg-white dark:bg-black relative'>
 
 					<div className='container mx-auto px-10 mb-24 md:mb-72 lg:mb-80'>
-						<p className='text-hero text-obsidian dark:text-white relative'><span className='text-ornament absolute bottom-[13px] -ml-10'>01</span>What we do</p>
+						<p className='text-hero text-obsidian dark:text-white relative'><span className='text-ornament absolute bottom-[13px] -ml-10'>01</span>{t('whatWeDo')}</p>
 
 						<p className='text-subtitle1 text-obsidian dark:text-white mt-24 md:mt-72 lg:mt-80'>We help creating your dreams.</p>
 						<p className='text-statement text-obsidian dark:text-white'>With us you can elevate your digital experience to the next level.</p>
