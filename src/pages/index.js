@@ -159,13 +159,13 @@ export default function Home() {
 
 		if (event) {
 			dest = event.target.getBoundingClientRect();
-			bubbleTabWidth = 40 * 2 + event.target.offsetWidth
+			bubbleTabWidth = 20 * 2 + event.target.offsetWidth
 			offset = bubbleTabWidth / 2 - event.target.offsetWidth / 2
 
 		} else {
 			const tab = document.querySelector("#tab" + step)
 			dest = tab.getBoundingClientRect();
-			bubbleTabWidth = 40 * 2 + tab.offsetWidth
+			bubbleTabWidth = 20 * 2 + tab.offsetWidth
 			offset = bubbleTabWidth / 2 - tab.offsetWidth / 2
 		}
 
@@ -212,20 +212,20 @@ export default function Home() {
 					</div>
 
 
-					<div className='sticky top-36 z-10 container mx-auto overflow-x-scroll sm:overflow-x-visible sm:my-16 fuckScrollBar'>
+					<div className='sticky top-36 z-10 container mx-auto overflow-y-hidden sm:overflow-y-visible overflow-x-scroll sm:overflow-x-visible sm:my-16 fuckScrollBar'>
 						<div id='tab'
 							 className='relative flex flex-row justify-between text-body backdrop-blur-[10px]
-							  text-obsidian dark:text-white w-full bg-cloud dark:bg-storm rounded-full h-[67px] sm:h-[85px]
-							   items-center px-10 min-w-[600px] m-[10px] sm:m-0'>
+							  text-obsidian dark:text-white sm:w-full bg-cloud dark:bg-storm rounded-full h-[67px] sm:h-[85px]
+							   items-center px-5 w-[600px] m-[10px] sm:m-0'>
 							<span id='bubbleTab' className='absolute bg-white dark:bg-obsidian w-[280px] h-[43px] sm:h-[60px] rounded-full left-0 transition-all'></span>
 							<p id='tab1' className='z-10 cursor-pointer px-4 lg:px-10 py-8' onClick={(e)=> moveTab(e,1)}>3D Projects</p>
 							<p id='tab2' className='z-10 cursor-pointer px-4 lg:px-10 py-8' onClick={(e)=> moveTab(e,2)}>UI & UX Design</p>
 							<p id='tab3' className='z-10 cursor-pointer px-4 lg:px-10 py-8' onClick={(e)=> moveTab(e,3)}>Coding</p>
 							<p id='tab4' className='z-10 cursor-pointer px-4 lg:px-10 py-8' onClick={(e)=> moveTab(e,4)}>Video & Photo</p>
 						</div>
-						<div className='border-gradient sm:m-0 -z-50 rounded-full min-w-[600px]'></div>
+						<div className='border-gradient sm:m-0 -z-50 rounded-full w-[600px] sm:w-auto'></div>
 					</div>
-					<div className='bg-zinc-50 dark:bg-neutral-900'>
+					<div className='bg-white dark:bg-black'>
 						<Activity step={tabState}></Activity>
 					</div>
 				</div>
