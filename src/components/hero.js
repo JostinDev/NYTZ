@@ -1,30 +1,11 @@
-import React, { useEffect } from "react";
-import Image from "next/image";
-
-import studio from "../../public/studio.svg";
-import nytz from "../../public/nytz.svg";
+import React from "react";
 
 export default function Hero() {
 
 	return (
-			<div className='flex h-[96%] w-full overflow-hidden whitespace-nowrap rotating-gradient rounded-3xl select-none'>
-				<div className='flex w-screen whitespace-nowrap absolute bottom-40 sm:bottom-60 left-0  animate-leftToRightStudio' >
-					<Image alt='studio' src={studio} className="scale-[1.2]"/>
-					<Image alt='studio' src={studio} className="scale-[1.2]"/>
-					<Image alt='studio' src={studio} className="scale-[1.2]"/>
-					<Image alt='studio' src={studio} className="scale-[1.2]"/>
-					<Image alt='studio' src={studio} className="scale-[1.2]"/>
-					<Image alt='studio' src={studio} className="scale-[1.2]"/>
-				</div>
-
-				<div className='flex w-screen whitespace-nowrap absolute bottom-20 left-0 animate-leftToRightNytz'>
-					<Image alt='studio' src={nytz}/>
-					<Image alt='studio' src={nytz}/>
-					<Image alt='studio' src={nytz}/>
-					<Image alt='studio' src={nytz}/>
-					<Image alt='studio' src={nytz}/>
-					<Image alt='studio' src={nytz}/>
-				</div>
+			<div className='h-[96%] rotating-gradient rounded-3xl select-none'>
+				<img  src='/images/please-work.gif' className="min-w-[1500px] w-full left-0 bottom-20 absolute">
+				</img>
 			</div>
 	);
 }

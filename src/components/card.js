@@ -1,8 +1,8 @@
 import React, {useEffect, useState} from "react";
-import openCard from "../../public/open-card.svg";
-import openCardDark from "../../public/open-card-dark.svg";
-import closeModal from "../../public/close-modal.svg";
-import closeModalDark from "../../public/close-modal-dark.svg";
+import openCard from "../../public/images/open-card.svg";
+import openCardDark from "../../public/images/open-card-dark.svg";
+import closeModal from "../../public/images/close-modal.svg";
+import closeModalDark from "../../public/images/close-modal-dark.svg";
 import Image from "next/image";
 
 export default function Card(props) {

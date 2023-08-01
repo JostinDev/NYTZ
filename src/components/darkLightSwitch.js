@@ -1,8 +1,8 @@
 import React, {useEffect} from "react";
-import moon from "../../public/moon.svg";
-import moonDark from "../../public/moon-dark.svg";
-import sun from "../../public/sun.svg";
-import sunDark from "../../public/sun-dark.svg";
+import moon from "../../public/images/moon.svg";
+import moonDark from "../../public/images/moon-dark.svg";
+import sun from "../../public/images/sun.svg";
+import sunDark from "../../public/images/sun-dark.svg";
 import Image from "next/image";
 
 export default function DarkLightSwitch() {
