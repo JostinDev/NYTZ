@@ -227,7 +227,7 @@ export default function Home() {
 					</div>
 
 
-					<div className='sticky top-36 z-10 container mx-auto overflow-y-hidden sm:overflow-y-visible overflow-x-scroll sm:overflow-x-visible sm:my-16 fuckScrollBar'>
+					<div className='sticky top-36 z-40 container mx-auto overflow-y-hidden sm:overflow-y-visible overflow-x-scroll sm:overflow-x-visible sm:my-16 fuckScrollBar'>
 						<div id='tab'
 							 className='relative flex flex-row justify-between text-body backdrop-blur-[10px]
 							  text-obsidian dark:text-white sm:w-full bg-cloud dark:bg-storm rounded-full h-[67px] sm:h-[85px]
@@ -244,6 +244,16 @@ export default function Home() {
 						<Activity step={tabState}></Activity>
 					</div>
 				</div>
+
+				<div className='relative bg-white dark:bg-black'>
+					<div className='container  mx-auto px-10 pb-24 md:pb-72 lg:pb-80'>
+						<p className='text-hero text-obsidian dark:text-white relative'><span className='text-ornament absolute bottom-[13px] -ml-10'>02</span>{t('whoWeAre')}</p>
+
+						<p className='text-subtitle1 text-obsidian dark:text-white mt-24 md:mt-72 lg:mt-80'>Your experts for everything digital.</p>
+						<p className='text-statement text-obsidian dark:text-white'>With us you can elevate your digital experience to the next level.</p>
+					</div>
+				</div>
+
 			</main>
 		</>
 	)
