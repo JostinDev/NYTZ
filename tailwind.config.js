@@ -27,71 +27,91 @@ module.exports = {
       },
       fontSize: {
         'title': ['2.25rem', {
-          lineHeight: '121px',
+          lineHeight: '45px',
           letterSpacing: '0.01em',
           fontWeight: '300'
         }],
-        'title-desk': '6rem',
+        'title-desk': ['6rem', {
+          lineHeight: '121px'
+        }],
 
         'hero': ['2.125rem', {
-          lineHeight: '91px',
+          lineHeight: '43px',
           letterSpacing: '0.02em',
           fontWeight: '300'
         }],
-        'hero-desk': '4.5rem',
+        'hero-desk': ['4.5rem', {
+          lineHeight: '91px'
+        }],
 
         'statement': ['1.625rem', {
-          lineHeight: '91px', //TODO
+          lineHeight: '33px',
           letterSpacing: '0.07em',
           fontWeight: '300'
         }],
-        'statement-desk': '3.5rem',
+        'statement-desk': ['3.5rem', {
+          lineHeight: '70px'
+        }],
 
         'body': ['1rem', {
-          lineHeight: '35px',
+          lineHeight: '20px',
           letterSpacing: '0.03em',
           fontWeight: '400'
         }],
-        'body-desk': '1.1875rem',
+        'body-desk': ['1.1875rem', {
+          lineHeight: '24px'
+        }],
 
         'subtitle1': ['1.25rem', {
-          lineHeight: '60px',
+          lineHeight: '25px',
           fontWeight: '700'
         }],
-        'subtitle1-desk': '2rem',
+        'subtitle1-desk': ['2rem', {
+          lineHeight: '40px'
+        }],
 
         'subtitle2': ['0.875rem', {
-          lineHeight: '40px',
+          lineHeight: '14px',
           fontWeight: '700'
         }],
-        'subtitle2-desk': '1.25rem',
+        'subtitle2-desk': ['1.25rem', {
+          lineHeight: '20px'
+        }],
 
         'cardText1': ['1.625rem', {
-          lineHeight: '70px',
+          lineHeight: '33px',
           fontWeight: '400'
         }],
-        'cardText1-desk': '3rem',
+        'cardText1-desk': ['3rem', {
+          lineHeight: '60px'
+        }],
 
         'cardText2': ['1.375rem', {
-          lineHeight: '50px',
+          lineHeight: '28px',
           fontWeight: '400'
         }],
-        'cardText2-desk': '1.75rem',
+        'cardText2-desk': ['1.75rem', {
+          lineHeight: '35px'
+        }],
 
         'ornament': ['0.8125rem', {
-          lineHeight: '30px',
+          lineHeight: '16px',
           fontWeight: '300'
         }],
-        'ornament-desk': '1.5rem',
+        'ornament-desk': ['1.5rem', {
+          lineHeight: '30px'
+        }],
 
         'button': ['1rem', {
-          lineHeight: '30px',
+          lineHeight: '20px',
           fontWeight: '300'
         }],
-        'button-desk': '1.5rem',
+        'button-desk': ['1.5rem', {
+          lineHeight: '30px'
+        }],
 
         'button-action': ['1rem', {
-          lineHeight: '30px',
+          lineHeight: '20px',
           fontWeight: '600'
         }],
         'button-action-desk': ['1.5rem', {

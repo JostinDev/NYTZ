@@ -52,7 +52,7 @@ export default function Menu() {
 
 			<div
 				id='mobileMenu'
-				className='fixed flex flex-col pt-8 pr-12 pl-28 top-0 left-0 right-0 bg-white dark:bg-black hidden' style={{height: 100 + 'svh'}}>
+				className='fixed flex flex-col pt-4 sm:pt-8 pr-12 pl-28 top-0 left-0 right-0 bg-white dark:bg-black hidden' style={{height: 100 + 'svh'}}>
 
 				<div
 					onClick={()=>toggleMenu(false)}

@@ -44,10 +44,9 @@ export default function Card(props) {
 					<p className='text-body mt-16 mb-16'>{props.more}</p>
 					<p
 						onClick={()=> setBackdrop(false)}
-						className='flex rounded-full self-center flex-wrap justify-center content-center cursor-pointer'>
-						<Image alt='' src={closeModal} className='block dark:hidden'></Image>
-						<Image alt='' src={closeModalDark} className='hidden dark:block'></Image>
-
+						className='flex self-center flex-wrap justify-center content-center cursor-pointer rounded-full bg-fog dark:bg-obsidian'>
+						<Image alt='' width={32} height={32} src={closeModal} className='block dark:hidden'></Image>
+						<Image alt='' width={32} height={32} src={closeModalDark} className='hidden dark:block'></Image>
 					</p>
 				</div>
 		</div>
@@ -57,14 +56,13 @@ export default function Card(props) {
 	return (
 		<div className='relative'>
 			<div className='flex flex-col justify-between bg-fog dark:bg-obsidian rounded-[48px] h-96 p-10 relative z-10'>
-				<div>
+				<div className='overflow-hidden'>
 					<h3 className='text-subtitle2 mb-2'>{props.title}</h3>
 					<p className='text-cardText2'>{props.description}</p>
 				</div>
-
-				<span onClick={()=> setBackdrop(true)} className='absolute bottom-5 right-5 cursor-pointer'>
-					<Image alt='More information' src={openCard} className='block dark:hidden'></Image>
-					<Image alt='More information' src={openCardDark} className='hidden dark:block'></Image>
+				<span onClick={()=> setBackdrop(true)} className='absolute bottom-5 right-5 cursor-pointer rounded-full bg-fog dark:bg-obsidian'>
+					<Image alt='More information' width={54} height={54} src={openCard} className='block dark:hidden'></Image>
+					<Image alt='More information' width={54} height={54} src={openCardDark} className='hidden dark:block'></Image>
 				</span>
 
 			</div>

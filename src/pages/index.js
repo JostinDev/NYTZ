@@ -6,6 +6,9 @@ import Image from "next/image";
 import whale from "../../public/images/whale.png";
 import taichi from "../../public/images/taichi.png";
 import sunrise from "../../public/images/sunrise.png";
+import meta from "../../public/images/NYTZ_meta.png";
+import metaBig from "../../public/images/NYTZ_meta_big.png";
+import metaUltra from "../../public/images/NYTZ_meta_ultra.png";
 import Card from "@/components/card";
 import {useTranslation} from "next-i18next";
 import {serverSideTranslations} from "next-i18next/serverSideTranslations";
@@ -213,7 +216,7 @@ export default function Home() {
 			</Head>
 			<main>
 				<Nav></Nav>
-				<div className="hero mx-auto px-8 sm:px-12 fixed bg-neutral-900 w-full top-[110px] bottom-0">
+				<div className="hero mx-auto px-8 sm:px-12 fixed bg-neutral-900 w-full top-[76px] sm:top-[126px] bottom-0">
 					<Hero></Hero>
 				</div>
 
@@ -252,8 +255,32 @@ export default function Home() {
 						<p className='text-subtitle1 text-obsidian dark:text-white mt-24 md:mt-72 lg:mt-80'>Your experts for everything digital.</p>
 						<p className='text-statement text-obsidian dark:text-white'>With us you can elevate your digital experience to the next level.</p>
 					</div>
-				</div>
 
+					<Image
+							className='w-full min-h-[400px]  md:min-h-[600px] max-h-[900px]'
+							src={metaUltra}
+							alt=""
+							placeholder='blur'
+							style={{objectFit:"cover"}}
+					/>
+
+					<div className='flex gap-8 justify-center max-w-[1000px] mx-auto mt-16 pb-60'>
+						<Card
+								title={'Justin Nydegger'}
+								description={'The developer The developer The developer The developer The developer The developer The developer The developer The developer The developer The developer The developer'}
+								more={'I really love coding stuff !'}>
+						</Card>
+
+
+						<Card
+								title={'Jonas Schütz'}
+								description={'The designer The designer The designer The designer The designer The designer The designer The designer The designer The designer The designer The designer The designer The designer '}
+								more={'I really love designing stuff !'}>
+						</Card>
+					</div>
+
+
+				</div>
 			</main>
 		</>
 	)
