@@ -63,19 +63,19 @@ export default function Menu(props) {
 				<div className='text-obsidian dark:text-white'>
 					<div className='transition-all overflow-hidden relative h-32 mb-10'>
 						<span className='text-ornament absolute bottom-5'>01</span>
-						<p id='menu1' className='text-title absolute ml-10 -bottom-32 inline-block cursor-pointer transition-all hover:skew-x-[-10deg]'>What we do</p>
+						<p id='menu1' className='text-title absolute ml-10 -bottom-32 inline-block cursor-pointer transition-all duration-300 ease-in-out hover:skew-x-[-10deg]'>What we do</p>
 					</div>
 					<div className='transition-all overflow-hidden relative h-32 mb-10'>
 						<span className='text-ornament absolute bottom-5'>02</span>
-						<p id='menu2'  className='text-title absolute ml-10 -bottom-32 inline-block cursor-pointer transition-all hover:skew-x-[-10deg]'>Who we are</p>
+						<p id='menu2'  className='text-title absolute ml-10 -bottom-32 inline-block cursor-pointer transition-all duration-300 ease-in-out hover:skew-x-[-10deg]'>Who we are</p>
 					</div>
 					<div className='transition-all overflow-hidden relative h-32 mb-10'>
 						<span className='text-ornament absolute bottom-5'>03</span>
-						<p id='menu3'  className='text-title absolute ml-10 -bottom-32 inline-block cursor-pointer transition-all hover:skew-x-[-10deg]'>Contact us</p>
+						<p id='menu3'  className='text-title absolute ml-10 -bottom-32 inline-block cursor-pointer transition-all duration-300 ease-in-out hover:skew-x-[-10deg]'>Contact us</p>
 					</div>
 					<div className='transition-all overflow-hidden relative h-32 mb-10'>
 						<span className='text-ornament absolute bottom-5'>04</span>
-						<p id='menu4'  className='text-title absolute ml-10 -bottom-32 inline-block cursor-pointer transition-all hover:skew-x-[-10deg]'>Impressum</p>
+						<p id='menu4'  className='text-title absolute ml-10 -bottom-32 inline-block cursor-pointer transition-all duration-300 ease-in-out hover:skew-x-[-10deg]'>Impressum</p>
 					</div>
 				</div>
 
