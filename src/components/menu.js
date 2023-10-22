@@ -1,12 +1,12 @@
-import React, {useEffect} from "react";
+import React, {useEffect, useRef} from "react";
 import DarkLightSwitch from "@/components/darkLightSwitch";
 import LangSwitch from "@/components/langSwitch";
 export default function Menu(props) {
 
-	let test;
+	const ref = useRef('')
+
 	useEffect(() => {
-		console.log(props.scrolled)
-		test = document.querySelector('#mobileMenu')
+		ref.current = document.querySelector('#mobileMenu')
 	}, );
 
 	function displayMenu() {
@@ -30,7 +30,7 @@ export default function Menu(props) {
 	}
 
 	function toggleMenu(isOpen) {
-		test.classList.toggle('hidden')
+		ref.current.classList.toggle('hidden')
 
 		if(isOpen) {
 			document.querySelector('body').style.overflowY = 'hidden'

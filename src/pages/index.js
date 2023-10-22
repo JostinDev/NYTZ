@@ -7,7 +7,6 @@ import whale from "../../public/images/whale.png";
 import taichi from "../../public/images/taichi.png";
 import sunrise from "../../public/images/sunrise.png";
 import meta from "../../public/images/NYTZ_meta.png";
-import metaBig from "../../public/images/NYTZ_meta_big.png";
 import metaUltra from "../../public/images/NYTZ_meta_ultra.png";
 import Card from "@/components/card";
 import {useTranslation} from "next-i18next";

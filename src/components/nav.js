@@ -1,12 +1,16 @@
-import React, {useEffect, useState} from "react";
+import React, {useEffect, useRef, useState} from "react";
 import Menu from "@/components/menu";
 
 export default function Nav() {
 
 	const [scrolled, setScrolled] = useState(false)
 
+	const ref = useRef('')
 
 	useEffect(() => {
+
+		ref.current = document.querySelector('.hero');
+
 		window.addEventListener("scroll", scrollStatus);
 		return () => {
 			window.removeEventListener("scroll", scrollStatus);
@@ -15,16 +19,11 @@ export default function Nav() {
 
 	function scrollStatus() {
 
-		let scroll = window.scrollY
-
-		let hero = document.querySelector('.hero');
-
-		if(window.scrollY > hero.offsetHeight) {
+		if(window.scrollY > ref.current.offsetHeight) {
 			setScrolled(true)
 		} else {
 			setScrolled(false)
 		}
-		console.log("SCROLL : ", scroll)
 	}
 
 
