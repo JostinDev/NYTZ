@@ -106,3 +106,7 @@
 .fuckScrollBar::-webkit-scrollbar {
     display: none;  /* Safari and Chrome */
 }
+
+html {
+    @apply bg-neutral-900;
+}

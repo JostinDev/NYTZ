@@ -1,11 +1,11 @@
 import React, {useEffect} from "react";
 import DarkLightSwitch from "@/components/darkLightSwitch";
 import LangSwitch from "@/components/langSwitch";
-export default function Menu() {
-
+export default function Menu(props) {
 
 	let test;
 	useEffect(() => {
+		console.log(props.scrolled)
 		test = document.querySelector('#mobileMenu')
 	}, );
 
@@ -52,7 +52,7 @@ export default function Menu() {
 
 			<div
 				id='mobileMenu'
-				className='fixed flex flex-col pt-4 sm:pt-8 pr-12 pl-28 top-0 left-0 right-0 bg-white dark:bg-black hidden' style={{height: 100 + 'svh'}}>
+				className={`fixed flex flex-col pt-4 ${props.scrolled ? 'sm:py-4' : 'sm:py-8'} pr-12 pl-28 top-0 left-0 right-0 bg-white dark:bg-black hidden`} style={{height: 100 + 'svh'}}>
 
 				<div
 					onClick={()=>toggleMenu(false)}

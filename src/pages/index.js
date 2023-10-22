@@ -31,8 +31,9 @@ export default function Home() {
 
 	useEffect(() => {
 		const heroHeight = document.querySelector('.hero')
+		const navHeight = document.querySelector('.nav')
 		const firstSection = document.querySelector("#firstSection")
-		firstSection.style.marginTop = heroHeight.clientHeight + 'px'
+		firstSection.style.marginTop = heroHeight.clientHeight + navHeight.clientHeight + 'px'
 
 		if(tabState === 1) {
 			moveTab(undefined, 1)
@@ -220,7 +221,7 @@ export default function Home() {
 					<Hero></Hero>
 				</div>
 
-				<div id='firstSection' className='mt-10 rounded-t-3xl pt-40 pb-16 bg-white dark:bg-black relative'>
+				<div id='firstSection' className='mt-10 rounded-t-[56px] pt-40 pb-16 bg-white dark:bg-black relative'>
 
 					<div className='container mx-auto px-10 mb-24 md:mb-72 lg:mb-80'>
 						<p className='text-hero text-obsidian dark:text-white relative'><span className='text-ornament absolute bottom-[13px] -ml-10'>01</span>{t('whatWeDo')}</p>
@@ -230,7 +231,7 @@ export default function Home() {
 					</div>
 
 
-					<div className='sticky top-36 z-40 container mx-auto overflow-y-hidden sm:overflow-y-visible overflow-x-scroll sm:overflow-x-visible sm:my-16 fuckScrollBar'>
+					<div className='sticky top-32 z-40 container mx-auto overflow-y-hidden sm:overflow-y-visible overflow-x-scroll sm:overflow-x-visible sm:my-16 fuckScrollBar'>
 						<div id='tab'
 							 className='relative flex flex-row justify-between text-body backdrop-blur-[10px]
 							  text-obsidian dark:text-white sm:w-full bg-cloud dark:bg-storm rounded-full h-[67px] sm:h-[85px]
