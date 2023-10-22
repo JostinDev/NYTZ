@@ -52,7 +52,7 @@ export default function Menu(props) {
 
 			<div
 				id='mobileMenu'
-				className={`fixed flex flex-col pt-4 ${props.scrolled ? 'sm:py-4' : 'sm:py-8'} pr-12 pl-28 top-0 left-0 right-0 bg-white dark:bg-black hidden`} style={{height: 100 + 'svh'}}>
+				className={`fixed flex flex-col pt-4 ${props.scrolled ? 'sm:py-4' : 'sm:py-8'} pr-12 pl-10 sm:pl-20 top-0 left-0 right-0 bg-white dark:bg-black hidden`} style={{height: 100 + 'svh'}}>
 
 				<div
 					onClick={()=>toggleMenu(false)}
